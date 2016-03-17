@@ -1,0 +1,15 @@
+In the implementation we have to enter the input size of the number of pages and by using the page rank algorithm, the ranks of all the pages get computed.
+Here, some of the notations are as :
+size	 : number of pages, by default 100
+feedIn	 : two-dimensional square matrix (size x size)containing randomly generated 0/1 as it's entries
+u		 : one-dimensional identity matrix (size x 1)
+P		 : it is same as feedIn just that all the elements are divided by the corresponding total number of reccomendations
+W 		 : it is same as u just that each element is divided by the size, this will be later used for eigenvector computation
+res4	 : the Markov matrix to get a unique solution
+rankVect : the final one-dimensional matrix containing ranks of the initial pages 
+ 
+Here, the method of power iteration is used to compute the eigenvectors.
+
+Further, two functions have been defined :
+	i) matrixMult : to multiply two matrices
+	ii) endLoop   : to determine when the two matrices become roughly equal
